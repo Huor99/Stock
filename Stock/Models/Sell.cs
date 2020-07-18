@@ -22,14 +22,14 @@ namespace Stock.Models
         [Required]
         public string Unit { get; set; }
         [Required]
-        public int Cost { get; set; }
+        public double Cost { get; set; }
         [Required]
-        public int Amount { get; set; }
+        public double Amount { get; set; }
         [Required]
         public DateTime Date { get; set; }
         [Required]
-        public int Recieved { get; set; }
+        public double Recieved { get; set; }
         [Required]
-        public int Return { get; set; }
+        public double Return { get; set; }
     }
 }

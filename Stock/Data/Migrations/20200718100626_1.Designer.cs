@@ -10,8 +10,8 @@ using Stock.Data;
 namespace Stock.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200718090737_2")]
-    partial class _2
+    [Migration("20200718100626_1")]
+    partial class _1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -228,11 +228,11 @@ namespace Stock.Data.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("Amount")
-                        .HasColumnType("int");
+                    b.Property<double>("Amount")
+                        .HasColumnType("float");
 
-                    b.Property<int>("Cost")
-                        .HasColumnType("int");
+                    b.Property<double>("Cost")
+                        .HasColumnType("float");
 
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
@@ -267,11 +267,11 @@ namespace Stock.Data.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("Amount")
-                        .HasColumnType("int");
+                    b.Property<double>("Amount")
+                        .HasColumnType("float");
 
-                    b.Property<int>("Cost")
-                        .HasColumnType("int");
+                    b.Property<double>("Cost")
+                        .HasColumnType("float");
 
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
@@ -289,11 +289,11 @@ namespace Stock.Data.Migrations
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
 
-                    b.Property<int>("Recieved")
-                        .HasColumnType("int");
+                    b.Property<double>("Recieved")
+                        .HasColumnType("float");
 
-                    b.Property<int>("Return")
-                        .HasColumnType("int");
+                    b.Property<double>("Return")
+                        .HasColumnType("float");
 
                     b.Property<string>("Unit")
                         .IsRequired()
